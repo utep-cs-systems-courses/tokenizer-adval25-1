@@ -5,4 +5,7 @@ main.o: main.c tokenizer.c history.c
 	gcc -c main.c tokenizer.c history.c
 
 clean:
-	rm -rf *.o 
+	rm -rf *.o *~ main
+
+run: main
+	./main
