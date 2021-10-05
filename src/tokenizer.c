@@ -58,7 +58,8 @@ char *copy_str(char *inStr, short len) {
 char **tokenize(char *str) {
   short token_len = count_words(str) + 1; // length of array to be returned
   char **token = (char**) malloc(sizeof(char) * token_len);
-  char *tmp_p1, *tmp_p2; // temporary pointers
+  char *tmp_p1 = (char*) malloc(sizeof(char));
+  char *tmp_p2 = (char*) malloc(sizeof(char)); // temporary pointers
   short w_len = 0; // distance between the 2 temp pointers (word length)
   for (int i = 0; i < token_len; i++) {
     if (i < token_len - 1) {
