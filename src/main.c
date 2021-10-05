@@ -5,6 +5,13 @@
 #define MAX 300
 
 int main (void) {
+  List *n_list;
+  n_list = init_history();
+  add_history(n_list, "hey guy");
+  //add_history(n_list, "alina");
+  print_history(n_list);
+  
+  /*
   int c, n;
   char input_str[MAX];
 
@@ -22,4 +29,5 @@ int main (void) {
   printf("Now Printing Tokens:\n");
   print_tokens(n_tokens);
   free_tokens(n_tokens);
+  */
 }
